@@ -535,27 +535,230 @@ footer {
     max-width: 90%;
     margin: auto;
 }
+
+.product-page-container button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-page-container button:hover {
+    background-color: var(--secondary-color);
+}
+
+.product-page-container h2 {
+    margin-bottom: 10px;
+}
+
 ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
-  }
-  
-  ul.breadcrumb li {
+}
+
+ul.breadcrumb li {
     display: inline;
     font-size: 16px;
-  }
-  
-  ul.breadcrumb li+li:before {
+}
+
+ul.breadcrumb li+li:before {
     padding: 8px;
     color: black;
     content: "/\00a0";
-  }
-  
-  ul.breadcrumb li a {
+}
+
+ul.breadcrumb li a {
     color: var(--primary-color);
     text-decoration: none;
-  }
-  
-  ul.breadcrumb li a:hover {
+}
+
+ul.breadcrumb li a:hover {
     color: var(--secondary-color);
-  }
+}
+
+.product-details {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+
+.product-picture {
+    flex-basis: 60%;
+    text-align: center;
+}
+
+.additional-pictures {
+    display: flex;
+}
+
+.additional-pictures img {
+    margin-left: 10px;
+    object-fit: cover;
+}
+
+.product-picture img {
+    height: 100%;
+    width: 100%;
+}
+
+.product-specifications {
+    flex-basis: 50%;
+}
+
+.product-specifications h2 {
+    font-size: 24px;
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding-right: 10px;
+}
+
+.product-specifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-specifications li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-bottom: solid 1px #dadada;
+    padding: 10px 0;
+}
+
+.product-specifications li span {
+    font-weight: bold;
+    margin: 5px;
+}
+
+.product-details,
+.descriptions,
+.form-container {
+    margin-bottom: 50px;
+}
+
+.descriptions p {
+    text-align: justify;
+}
+
+.form-container form {
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+    border: solid 1px #dadada;
+}
+
+.form-container .form-group {
+    margin-bottom: 15px;
+}
+
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-container form input[type="text"],
+.form-container form input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-container .radio-group,
+.form-container .checkbox-group {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.form-container form input[type="radio"] {
+    margin-top: 0;
+}
+
+.form-container .radio-group label,
+.form-container .checkbox-group label {
+    margin-right: 5px;
+    margin-bottom: 0;
+}
+
+.form-container form button {
+    grid-column: span 2;
+    width: 250px;
+    margin: auto;
+}
+
+.product-specifications h2:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 3px;
+    transform: translateY(-50%);
+    top: 50%;
+    height: 70%;
+    background-color: var(--primary-color);
+}
+
+.additional-pictures img:last-child {
+    margin-left: 0;
+}
+
+.comments .comment-section {
+    margin-top: 20px;
+}
+
+.comments .comment {
+    margin-bottom: 20px;
+    border: solid 1px #dadada;
+    padding: 15px;
+    border-radius: var(--pic-radius);
+}
+
+.comments .user-info {
+    margin-bottom: 5px;
+}
+
+.comments .user-name {
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.comments .comment-date {
+    color: #888;
+    font-size: 12px;
+}
+
+.comments .comment-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.comments .comment-form {
+    margin: 20px 0;
+}
+
+.comments .form-group {
+    margin-bottom: 10px;
+}
+
+.comments label {
+    display: block;
+    font-weight: bold;
+}
+
+.comments textarea {
+    width: 100%;
+    height: 100px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
