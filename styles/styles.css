@@ -79,7 +79,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: #fff;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
     border-radius: 44px;
     padding: 0px 60px;
@@ -89,13 +89,13 @@ header {
 .header-content::before {
     content: "";
     background: url('../assets/images/curve.svg') no-repeat;
-    width: 364px;
-    height: 325px;
+    width: 344px;
+    height: 305px;
     margin: auto;
     left: 0;
     right: 0;
     background-size: contain;
-    top: -118px;
+    top: -108px;
     position: absolute;
 }
 
@@ -108,8 +108,8 @@ header {
 
 .logo:before {
     content: '';
-    width: 239px;
-    height: 239px;
+    width: 215px;
+    height: 215px;
     background: #f5f5f5;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -126,11 +126,6 @@ header {
 .logo img {
     max-width: 190px;
     position: relative;
-}
-
-.search-bar {
-    display: flex;
-    align-items: center;
 }
 
 .contact-info p {
@@ -283,10 +278,15 @@ nav ul li a:hover::before {
     display: inline-block;
     padding: 7px 20px;
     min-width: 120px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: #fff;
     text-decoration: none;
     border-radius: var(--pic-radius);
+    transition: ease .2s;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
 }
 
 .btn-text {
@@ -804,4 +804,111 @@ ul.breadcrumb li a:hover {
 
 .product-archive-container .product h3 {
     margin-bottom: 10px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.pagination ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    direction: ltr;
+    display: inline-flex;
+}
+
+.pagination li {
+    display: inline-flex;
+    margin: 0 5px;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    transition: ease .2s;
+}
+
+.pagination li:hover {
+    background-color: var(--secondary-color);
+}
+
+.pagination li.active {
+    background-color: var(--secondary-color);
+}
+
+.pagination a {
+    display: flex;
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.pagination a i {
+    font-size: 14px;
+}
+
+.pagination a svg {
+    fill: #fff;
+    width: 15px;
+}
+
+/************** responsive **************/
+@media only screen and (max-width: 767px) {
+    .social-icon {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .social-icon ul {
+        padding: 0;
+    }
+
+    .header-content {
+        border-radius: 6px 6px 0 0;
+        padding: 0px 20px;
+    }
+
+    .header-content::before {
+        display: none;
+    }
+
+    .contact-info {
+        display: none;
+    }
+
+    .logo {
+        display: flex;
+        position: relative;
+        left: auto;
+        transform: none;
+    }
+
+    .logo img {
+        max-width: 50px;
+    }
+
+    .logo:before {
+        display: none;
+    }
+
+    nav {
+        border-radius: 0 0 6px 6px;
+        max-width: none;
+    }
+
+    .product-details {
+        display: block;
+    }
+
+    .additional-pictures {
+        overflow: auto;
+    }
+
+    .product-picture {
+        margin-bottom: 20px;
+    }
 }
