@@ -593,6 +593,7 @@ ul.breadcrumb li a:hover {
 
 .additional-pictures {
     display: flex;
+    overflow: auto;
 }
 
 .additional-pictures img {
@@ -898,6 +899,7 @@ ul.breadcrumb li a:hover {
     nav {
         border-radius: 0 0 6px 6px;
         max-width: none;
+        padding: 10px;
     }
 
     .product-details {
@@ -910,5 +912,42 @@ ul.breadcrumb li a:hover {
 
     .product-picture {
         margin-bottom: 20px;
+    }
+
+    .grid.col-3,
+    .grid {
+        grid-template-columns: auto !important;
+    }
+
+    .intro {
+        display: block;
+    }
+
+    .product-card.landscape h3 {
+        font-size: 30px;
+    }
+
+    .product-card.landscape h4 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1170px) {
+
+    .header-content::before,
+    .logo:before {
+        display: none;
+    }
+
+    .logo {
+        display: flex;
+    }
+
+    .logo img {
+        max-width: 65px;
+    }
+
+    nav ul {
+        justify-content: center;
     }
 }
